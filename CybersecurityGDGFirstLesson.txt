@@ -1,0 +1,397 @@
+--Engleza daca sunt si cei de la nevo cu noi in sala, daca nu, traducem pe loc cum putem
+
+IP Addresses,
+
+IP address stands for internet protocol address; it is an identifying number that is associated with a
+specific computer or computer network.
+An IP address serves two principal functions: it identifies the host, or more specifically its network
+interface, and it provides the location of the host in the network, and thus the capability of establishing
+a path to that host. Its role has been characterized as follows: "A name indicates what we seek.
+An address indicates where it is. A route indicates how to get there."
+The header of each IP packet contains the IP address of the sending host and that of the destination host.
+Two versions of the Internet Protocol are in common use on the Internet today.
+The original version of the Internet Protocol that was first deployed in 1983 in the ARPANET,
+the predecessor of the Internet, is Internet Protocol version 4 (IPv4).
+
+MAC Addresses,
+
+MAC Address or media access control address is a unique ID assigned to network interface cards (NICs).
+It identifies the hardware manufacturer and is used for network communication between devices in a
+network segment.
+This use is common in most IEEE 802 networking technologies, including Ethernet, Wi-Fi, and Bluetooth.
+Within the Open Systems Interconnection (OSI) network model, MAC addresses are used in the medium access
+control protocol sublayer of the data link layer.
+As typically represented, MAC addresses are recognizable as six groups of two hexadecimal digits, 
+separated by hyphens, colons, or without a separator.
+
+TCP, UDP, Three-Way Handshakes,
+
+TCP:
+Transmission Control Protocol (TCP) is a standard that defines how to establish and maintain a network 
+conversation by which applications can exchange data.
+TCP works with the Internet Protocol (IP), which defines how computers send packets of data to each other.
+
+UDP:
+User Datagram Protocol (UDP) is a communications protocol that is primarily used to establish low-latency 
+and loss-tolerating connections between applications on the internet. 
+UDP speeds up transmissions by enabling the transfer of data before an agreement is provided by the 
+receiving party.
+
+Three-Way Handshakes:
+A three-way handshake is a method used in a TCP/IP network to create a connection between a local host/client
+and server.
+It is a three-step method designed to allow both communicating ends to initiate and negotiate the 
+parameters of the network TCP socket connection at the same time before data such as HTTP and SSH is 
+transmitted.
+Multiple TCP socket connections can be transmitted in both directions simultaneously. 
+A three-way handshake is also known as a TCP handshake or SYN-SYN-ACK, and requires both the client and 
+server to exchange SYN (synchronization) and ACK (acknowledgment) packets before actual data communication 
+begins.
+
+
+Ports and Protocols,
+
+Most ports are reserved for certain protocols — for example, all Hypertext Transfer Protocol (HTTP) 
+messages go to port 80. While IP addresses enable messages to go to and from specific devices, 
+port numbers allow targeting of specific services or applications within those devices.
+TCP and UDP specify the source and destination port numbers in their packet headers and that information, 
+along with the source and destination IP addresses and the transport protocol (TCP or UDP), 
+enables applications running on hosts on a TCP/IP network to communicate.
+Applications that provide a service (such as FTP and HTTP servers) open a port on the local computer and 
+listen for connection requests. 
+A client can request the service by pointing the request to the application’s IP address and port. 
+A client can use any locally unused port number for communication
+
+
+
+OSI Model,
+
+The OSI Model (Open Systems Interconnection Model) is a conceptual framework used to describe the functions
+of a networking system.
+The OSI model characterizes computing functions into a universal set of rules and requirements in order to 
+support interoperability between different products and software.
+In the OSI reference model, the communications between a computing system are split into seven different 
+abstraction layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
+
+Created at a time when network computing was in its infancy, the OSI was published in 1984 by the 
+International Organization for Standardization (ISO). 
+Though it does not always map directly to specific systems, the OSI Model is still used today as a means to 
+describe Network Architecture
+
+Physical Layer
+The lowest layer of the OSI Model is concerned with electrically or optically transmitting raw unstructured 
+data bits across the network from the physical layer of the sending device to the physical layer of the 
+receiving device. It can include specifications such as voltages, pin layout, cabling, and radio frequencies. 
+At the physical layer, one might find “physical” resources such as network hubs, cabling, repeaters, 
+network adapters or modems.
+
+Data Link Layer
+At the data link layer, directly connected nodes are used to perform node-to-node data transfer where data 
+is packaged into frames. The data link layer also corrects errors that may have occurred at the physical 
+layer.
+
+The data link layer encompasses two sub-layers of its own. 
+The first, media access control (MAC), provides flow control and multiplexing for device transmissions 
+over a network. The second, the logical link control (LLC), provides flow and error control over the physical
+medium as well as identifies line protocols.
+
+Network Layer
+The network layer is responsible for receiving frames from the data link layer, and delivering them to their
+ intended destinations among based on the addresses contained inside the frame.
+ The network layer finds the destination by using logical addresses, such as IP (internet protocol).
+ At this layer, routers are a crucial component used to quite literally route information
+ where it needs to go between networks.
+
+Transport Layer
+The transport layer manages the delivery and error checking of data packets. 
+It regulates the size, sequencing, and ultimately the transfer of data between systems and hosts. 
+One of the most common examples of the transport layer is TCP or the Transmission Control Protocol.
+
+Session Layer
+The session layer controls the conversations between different computers. 
+A session or connection between machines is set up, managed, and termined at layer 5. 
+Session layer services also include authentication and reconnections.
+
+Presentation Layer
+The presentation layer formats or translates data for the application layer based on the syntax or semantics 
+that the application accepts. Because of this, it at times also called the syntax layer. 
+This layer can also handle the encryption and decryption required by the application layer.
+
+Application Layer
+At this layer, both the end user and the application layer interact directly with the software application. 
+This layer sees network services provided to end-user applications such as a web browser or Office 365. 
+The application layer identifies communication partners, resource availability, and synchronizes 
+communication.
+
+Subnetting,
+
+IP Subnetting is a process of dividing a large IP network in smaller IP networks. In Subnetting we create multiple small manageable networks from a single large IP network.
+
+Let’s take an example.
+
+To best utilize available addresses if we put more than 16000000 hosts in a single network, due to broadcast 
+and collision, that network will never work. If we put less hosts then remaining addresses will be wasted.
+
+Subnetting provides a better way to deal with this situation. 
+Subnetting allows us to create smaller networks from a single large network which not only fulfill 
+our hosts’ requirement but also offer several other networking benefits.
+
+Identifying network portion and host portion in an IP address is the first step of Subnetting.
+Subnetting can only be done in host portion. 
+Subnet mask is used to distinguish the network portion from host portion in an IP address.
+
+An IP address and a subnet mask both collectively provide a numeric identity to an interface. 
+Both addresses are always used together. Without subnet mask, an IP address is an ambiguous address and 
+without IP address a subnet mask is just a number.
+
+Both addresses are 32 bits in length. 
+These bits are divided in four parts. Each part is known as octet and contains 8 bits. 
+Octets are separated by periods and written in a sequence.
+
+Subnet mask assigns an individual bit for each bit of IP address. 
+If IP bit belongs to network portion, assigned subnet mask bit will be turned on. 
+If IP bit belongs to host portion, assigned subnet mask bit will be turned off.
+
+There are two popular notations to write the IP address and Subnet mask; Decimal notation and Binary notation.
+
+In decimal notation, a value range 1 to 255 represents a turned on bit while a value 0 (zero) 
+represents a turned off bit.
+
+Valid host addresses
+All addresses between Network address and Broadcast address are known as valid host addresses. 
+Only valid host addresses can be assigned to the devices in a network. 
+These devices include end user devices such as computes, laptops, tablets, smartphones, IP phones, 
+servers, printers, terminals, IP camera and networking devices such switches, routers, 
+firewalls and proxy servers. In short, any device that uses IP protocol for data transferring needs a 
+valid host address.
+
+Block Size
+Block size is the sum of network address, valid host addresses and broadcast address. 
+For example, if in a network there are 6 valid hosts then block size of that network is 8 
+(1 network address + 6 valid hosts + 1 broadcast address).
+
+Power of 2
+An IP address is built from the various combinations of IP bits. 
+Understanding how many combinations the number of bits provides or to get the number of 
+combinations how many bits we need is the second essential step of Subnetting.
+
+A combination of all 32 represents a unique IP address.
+A combination of network bits in IP address represents the number of networks or subnets.
+A combination of host bits in IP address represents the number of total hosts.
+To know how many combinations the number of bits provides or to get the number of combinations how many bits 
+are required, we use the power of 2.
+
+For example, to break a single large network in 4 subnets, we need 2 (22 = 4) Subnetting bits. 
+This way if we have 3 Subnetting bits, we can make 8 (23 = 8) additional networks.
+
+Sudo Command
+
+The sudo command allows you to run programs with the security privileges of another user 
+(by default, as the superuser).
+It prompts you for your personal password and confirms your request to execute a command by checking a file, 
+called sudoers , which the system administrator configures.
+
+When the sudo command is used, a timestamp is entered in the system logs. 
+The user can run commands with elevated privileges for a short time (default 15 minutes). 
+If a non-sudo user tries to use the sudo command, it is logged as a security event
+
+sudo can be used with additional options:
+
+-h – help; displays syntax and command options
+-V – version; displays the current version of the sudo application
+-v – validate; refresh the time limit on sudo without running a command
+-l – list; lists the user’s privileges, or checks a specific command
+-k – kill; end the current sudo privileges
+Additional options can be found under the -h option.
+
+Navigation Commands,
+
+he most fundamental skills you need to master are moving around the filesystem and getting an idea of what 
+is around you. We will discuss the tools that allow you to do this in this section.
+
+When you log into your server, you are typically dropped into your user account’s home directory. 
+A home directory is a directory set aside for your user to store files and create directories. 
+It is the location in the filesystem where you have full dominion.
+
+To find out where your home directory is in relationship to the rest of the filesystem, you can use the 
+pwd command. This command displays the directory that we are currently in.
+
+Now that you know how to display the directory that you are in, we can show you how to look at the contents 
+of a directory.
+
+Currently, your home directory that we saw above does not have much to see, so we will go to another, 
+more populated directory to explore. Type the following in your terminal to move to this directory 
+(we will explain the details of moving directories in the next section). 
+Afterward, we’ll use pwd to confirm that we successfully moved.
+
+Now that we are in a new directory, let’s look at what’s inside. To do this, we can use the 'ls' command
+
+As you can see, there are many items in this directory. 
+We can add some optional flags to the command to modify the default behavior. 
+For instance, to list all of the contents in an extended form, we can use the '-l' flag
+
+
+'cd' lets you go to a directory directly
+'less' lets you see the portion of the dir that fits in the terminal
+to crrate a file use 'touch'
+to create a directory use 'mkdir'
+to move and rename the files use 'mv'
+cp for copying
+remvoing with rm and rmdir
+using nano for editing
+
+Users and Priviliges,
+
+To create a secure environment in Linux, you need to learn about user groups and permissions. 
+For example, if you work in a company and you want the finance department to read a file but not make any 
+modification to it, then you need to use permissions in Linux. 
+It is a must for every programmer working with Linux nowadays.
+
+Let’s start by talking about the ownership of Linux files.
+
+User: the owner of the file (person who created the file).
+Group: the group can contain multiple users. Therefore, all users in that group will have the same 
+permissions. It makes things easier than assign permission for every user you want.
+Other: any person has access to that file, that person has neither created the file, nor are they in any 
+group which has access to that file.
+When you perform the following command 'ls -l', then you will see the file’s permissions
+We will work with this part “-rw-r–r–".
+
+The characters mean:
+
+‘r’ = read.
+‘w’ = write.
+‘x’ = execute.
+‘-’ = no permission.
+
+Let’s change the permissions using the chmod command.
+
+chmod o+w loremipsum.txt
+
+This command will add the write permission for other users to my text file “loremipsum.txt”.
+
+Now if you try to execute ls -l then you will see -rw-r--rw-.
+
+“o” refers to others, “g” for the group, “u” for the user, and “a” for all.
+
+Now let’s add the execute permission to the user with:
+
+chmod u+x section.txt
+The permissions will be -rwxr--rw-.
+
+If you want to remove the permission, you can use the same method but with “-” instead of “+”. 
+For example, let’s remove the execute permission from the user by:
+
+chmod u-x section.txt
+And the permissions now are: -rw-r--rw-.
+
+Also, you can use Symbolic Mode to modify permissions like the following:
+
+Number	Permission
+0	No permission
+1	Execute
+2	Write
+3	Execute and Write
+4	Read
+5	Read and Execute
+6	Read and Write
+7	Read, Write and Execute
+For example, let’s give every permission for all with:
+
+chmod 777 section.txt
+
+Then the permissions will be: -rwxrwxrwx.
+
+Let’s remove the execute from the group and the write from other by:
+
+chmod 765 section.txt
+The permissions will be: -rwxrw-r-x.
+
+User accounts
+Create a user
+We can create a new user account by issuing the following command:
+
+sudo useradd testuser
+We can make sure that the user has been created in two ways:
+
+id testuser .
+And the output will be something like this:
+
+uid=1007(testuser) gid=1009(testuser) groups=1009(testuser) 
+This will show the user id and the groups that the user is currently in, usually, a new group with 
+the same username is assigned to the user.
+
+By opening the following file: /etc/passwd.
+So we can issue cat /etc/passwd and we will see the new user that has been created.
+
+After creating the user using the command above, you notice that no user directories have been created 
+inside /home directory, which is not good since the user cannot log in to his account.
+
+To create a new user with its directories, we can issue:
+
+sudo useradd -m -s /bin/bash testuser
+
+If you navigate to the /home directory, you notice that a new directory with the name testuser is created.
+
+Afterwards, you need to set a new password to the testuser by:
+
+sudo passwd testuser
+
+We noticed that creating a new user takes a lot of commands to accomplish, so there is a command that automates everything:
+
+sudo adduser testuser
+
+After creating a new user and setting a password to it, you can log in in two ways:
+
+Through GUI.
+By the terminal: su - testuser.
+
+Delete a user
+
+Like the process of adding users, there are two commands that delete a user.
+
+sudo userdel testuser
+
+If you try that command, you will notice that the user directory has not been deleted and you need to delete 
+it by yourself.
+
+You can use this automated command to do everything for you:
+
+sudo deluser --remove-home testuser
+
+User groups
+
+A group is a collection of users. The primary purpose of the groups is to define a set of privileges 
+like read, write, or execute permission for a given resource that can be shared among the users within 
+the group.
+
+Create a group
+
+You can see all of the groups you have by opening the following file:
+
+cat /etc/group
+
+Let’s create a group with the name of section by:
+
+sudo groupadd section
+
+Add user to a group
+
+We will add the testuser user to the section group by:
+
+sudo usermod -aG section testuser
+
+Delete user from a group
+
+You can delete the testuser from the group with:
+
+sudo gpasswd -d testuser section
+
+Delete a group
+
+Let’s delete the previous group by:
+
+sudo groupdel section
+-----------------------------
+
+~100-110 minute
